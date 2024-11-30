@@ -96,3 +96,47 @@ class Perceptron:
                 self.weights_input_hidden[j] += X.reshape(-1, 1).dot(d_hidden_layers[j].reshape(1, -1)) * self.learning_rate
                 self.bias_input_hidden[j] += d_hidden_layers[j] * self.learning_rate
         pass
+
+    def train(self, X_train, y_train, epochs, learning_rate):
+        self.epochs = epochs
+        self.learning_rate = learning_rate
+        y_train_one_hot = np.zeros((len(y_train), self.output_size))
+        #print(X_train, y_train)
+        for i in range(len(y_train)):
+            y_train_one_hot[i][int(y_train[i])] = 1
+        for epoch in range(self.epochs):
+            for ind in range(len(X_train)):
+                if (ind % 10000 == 0 and ind > 0):
+                    print(ind)
+                
+                self.forward(X_train[ind].reshape(-1))
+                self.backprop(y_train_one_hot[ind])
+            print(f'Epoch {epoch + 1}/{self.epochs} completed')
+        pass
+
+    def train_on_images(self, pathes, y_train, epochs, learning_rate):
+        X = []
+        for cur in pathes:
+            im = iio.imread(cur)
+            X.append(im)
+        X = np.array(X)
+        self.train(X, y_train, epochs, learning_rate)
+    
+    def predict(self, X):
+        predicted_output = self.forward(X.reshape(-1))
+        return np.argmax(predicted_output)
+        
+    def predict_image(self, path):
+        if (file_exists(path) == False):
+            return -1
+        #predict images/mnist_png/test/0/10.png
+        im = iio.imread(path)
+        return self.predict(im)
+    def save_model(self, path):
+        save_array = np.array([np.asarray(self.weights_input_hidden, dtype="object"), self.weights_output_hidden, np.asarray([cur.reshape(-1) for cur in self.bias_input_hidden], dtype="object")], dtype="object")
+        if ('/' not in path):
+            np.save(path, save_array, allow_pickle=True)
+            return
+        fold = '/'.join(path.split('/')[:-1])
+        os.makedirs(fold, exist_ok=True)
+        np.save(path, save_array, allow_pickle=True)
