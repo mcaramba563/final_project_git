@@ -15,7 +15,7 @@ def do_predict(str):
             return -1
         ans = nn.predict_image(str[1])
         if ans == -1:
-            print('Something went wrong. Check the path to the file and try again')
+            print('Something went wrong. Check the path to the file and try again.')
             return -1
         print(ans)
         return 0
@@ -41,12 +41,11 @@ def do_train(str):
         if not file_exists(name_of_file):
             print('Check the name of the file')
             return -1
-
         with open(name_of_file, 'r') as f:
             data = f.read()
             for cur_str in data.split("\n"):
                 if not cur_str.strip():
-                    continue  # Skip empty lines
+                    continue
                 try:
                     path, label = tuple(cur_str.split())
                     if not file_exists(path):
@@ -60,6 +59,7 @@ def do_train(str):
 
         nn.train_on_images(pathes, labels, epochs, learning_rate)
         return 0
+
     except Exception as e:
         print(f"Error during training: {e}")
         return -1
@@ -76,7 +76,7 @@ def do_train_on_random_images(str):
         epochs = int(str[2])
         learning_rate = float(str[3])
         if n <= 0 or epochs <= 0 or learning_rate <= 0:
-            print('Check count of images, epochs, and learning_rate values')
+            print('Check count of images, epochs, and learning_rate values.')
             return -1
 
         pathes, labels = get_random_pathes(n)
@@ -107,7 +107,7 @@ def do_make_custom_model(str):
 def do_load_custom_model(str):
     try:
         if len(str) < 2:
-            print('You need to specify the path to the file')
+            print('You need to specify the path to the file.')
             return -1
         if not file_exists(str[1]):
             print('Invalid file name')
