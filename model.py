@@ -140,3 +140,9 @@ class Perceptron:
         fold = '/'.join(path.split('/')[:-1])
         os.makedirs(fold, exist_ok=True)
         np.save(path, save_array, allow_pickle=True)
+        
+    def load_model(self, path):
+        save_array = np.load(path, allow_pickle=True)
+        self.weights_input_hidden = save_array[0]
+        self.weights_output_hidden = save_array[1]
+        self.bias_input_hidden = np.asarray([cur for cur in save_array[2]], dtype="object")
