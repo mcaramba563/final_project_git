@@ -1,0 +1,1 @@
+images/mnist_png/test/0/10.png 0

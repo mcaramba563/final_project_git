@@ -1,0 +1,2 @@
+images/mnist_png/test/0/10.png 0
+images/mnist_png/tesasddast/0/10.png 0
