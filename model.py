@@ -43,3 +43,56 @@ class Perceptron:
     def softmax(self, x):
         exps = np.exp(x - np.max(x))
         return exps / np.sum(exps, axis=-1, keepdims=True)
+
+    def forward(self, X):
+        hidden_layer_input = [None for _ in range(len(self.weights_input_hidden))]
+        hidden_layer_output = [None for _ in range(len(self.weights_input_hidden))]
+        for j in range(len(self.weights_input_hidden)):
+            if (j == 0):
+                hidden_layer_input[j] = np.dot(X, self.weights_input_hidden[0]) + self.bias_input_hidden[j]
+            else:
+                hidden_layer_input[j] = np.dot(hidden_layer_output[j - 1], self.weights_input_hidden[j]) + self.bias_input_hidden[j]
+                #print(hidden_layer_input[j].shape)
+                #break
+            hidden_layer_output[j] = self.tanh(hidden_layer_input[j])
+        #break
+        final_hidden_layer_input = np.dot(hidden_layer_output[-1], self.weights_output_hidden) 
+        final_hidden_layer_output = self.tanh(final_hidden_layer_input)
+
+        final_output = self.softmax(final_hidden_layer_output)
+        self.hidden_layer_output = hidden_layer_output
+        self.final_hidden_layer_output = final_hidden_layer_output
+        self.X = X
+        return final_output
+
+    def backprop(self, y_train_one_hot):
+        X = self.X
+        hidden_layer_output = self.hidden_layer_output
+        final_output = self.final_hidden_layer_output
+        error_final = y_train_one_hot - final_output
+        
+        d_final_output = error_final * self.tanh_derivative(final_output)
+        d_hidden_layers = [None for _ in range(len(self.weights_input_hidden))]
+    
+        for j in reversed(range(len(self.weights_input_hidden))):
+            if (j == len(self.weights_input_hidden) - 1):
+                cur_error = np.dot(d_final_output, self.weights_output_hidden.T)
+                d_hidden_layers[j] = cur_error * self.tanh_derivative(hidden_layer_output[j])
+            else:
+                cur_error = np.dot(d_hidden_layers[j + 1], self.weights_input_hidden[j + 1].T)
+                d_hidden_layers[j] = cur_error * self.tanh_derivative(hidden_layer_output[j])
+                #print(cur_error.shape, d_hidden_layers[j].shape)
+                #break
+        #break
+        #weights update
+        self.weights_output_hidden += hidden_layer_output[-1].reshape(-1, 1).dot(d_final_output.reshape(1, -1)) * self.learning_rate
+        
+        
+        for j in range(len(self.weights_input_hidden)):
+            if (j > 0):
+                self.weights_input_hidden[j] += hidden_layer_output[j - 1].reshape(-1, 1).dot(d_hidden_layers[j].reshape(1, -1)) * self.learning_rate
+                self.bias_input_hidden[j] += d_hidden_layers[j] * self.learning_rate
+            else:
+                self.weights_input_hidden[j] += X.reshape(-1, 1).dot(d_hidden_layers[j].reshape(1, -1)) * self.learning_rate
+                self.bias_input_hidden[j] += d_hidden_layers[j] * self.learning_rate
+        pass
