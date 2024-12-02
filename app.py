@@ -6,9 +6,19 @@ import copy
 from app import *
 
 default_model = Perceptron(path_to_load='models/folder2/asd.npy')
+"""A default perceptron model loaded from a predefined file."""
 nn = Perceptron(path_to_load='models/folder2/asd.npy')
+"""The current perceptron model in use."""
 
 def do_predict(str):
+    """
+        Predicts the class of an image given its file path.
+
+        :param str: List of strings where the second element is the image file path
+        :type str: list of str
+        :returns: 0 on success, -1 on failure
+        :rtype: int
+    """
     try:
         if len(str) < 2:
             print("You need to specify the path to file")
@@ -24,6 +34,14 @@ def do_predict(str):
         return -1
 
 def do_train(str):
+    """
+        Trains the model on labeled image data from a file.
+
+        :param str: List of strings containing the file path, epochs, and learning rate
+        :type str: list of str
+        :returns: 0 on success, -1 on failure
+        :rtype: int
+    """
     try:
         if len(str) < 4:
             print("You need to specify the path to file (with names of files and labels), epochs, and learning rate")
@@ -66,6 +84,14 @@ def do_train(str):
 
 
 def do_train_on_random_images(str):
+    """
+        Trains the model on a random selection of labeled images.
+
+        :param str: List of strings containing the number of images, epochs, and learning rate
+        :type str: list of str
+        :returns: 0 on success, -1 on failure
+        :rtype: int
+    """
     try:
         if len(str) < 4:
             print('You need to specify count of images, epochs, and learning_rate')
@@ -87,6 +113,14 @@ def do_train_on_random_images(str):
         return -1
 
 def do_make_custom_model(str):
+    """
+        Creates a custom perceptron model with specified hidden layer sizes.
+
+        :param str: List of strings where each element represents the number of neurons in a hidden layer
+        :type str: list of str
+        :returns: 0 on success, -1 on failure
+        :rtype: int
+    """
     try:
         if len(str) < 2:
             print('You need to specify the count of neurons in each layer')
@@ -105,6 +139,14 @@ def do_make_custom_model(str):
         return -1
 
 def do_load_custom_model(str):
+    """
+        Loads a custom perceptron model from a specified file path.
+
+        :param str: List of strings where the second element is the model file path
+        :type str: list of str
+        :returns: 0 on success, -1 on failure
+        :rtype: int
+    """
     try:
         if len(str) < 2:
             print('You need to specify the path to the file.')
@@ -123,6 +165,14 @@ def do_load_custom_model(str):
 
 
 def do_save_model(str):
+    """
+        Saves the current model to a specified file path.
+
+        :param str: List of strings where the second element is the save file path
+        :type str: list of str
+        :returns: 0 on success, -1 on failure
+        :rtype: int
+    """
     try:
         if len(str) < 2:
             print('Specify the path to the file')
@@ -137,6 +187,9 @@ def do_save_model(str):
         return -1
 
 def do_load_default_model():
+    """
+        Loads the default perceptron model from a predefined file.
+    """
     global nn
     global default_model
     nn = Perceptron(path_to_load='models/folder2/asd.npy')
