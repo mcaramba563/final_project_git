@@ -3,7 +3,10 @@ from unittest.mock import Mock
 import builtins
 
 import numpy as np
+import sys
+import os
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from app import *
 
 @pytest.fixture
@@ -49,14 +52,14 @@ def test_incorrect_predict(app_instance):
     assert app_instance.do_predict('predict'.split()) == -1
 
 def test_incorrect_train(app_instance):
-    assert app_instance.do_train('train file_with_names.txt'.split()) == -1
-    assert app_instance.do_train('train file_with_names.txt 2'.split()) == -1
-    assert app_instance.do_train('train file_with_names.txt -1 0.01'.split()) == -1
+    assert app_instance.do_train('train tests/file_with_names.txt'.split()) == -1
+    assert app_instance.do_train('train tests/file_with_names.txt 2'.split()) == -1
+    assert app_instance.do_train('train tests/file_with_names.txt -1 0.01'.split()) == -1
     assert app_instance.do_train('train asd.txt 1 0.01'.split()) == -1
-    assert app_instance.do_train('train file_with_incorrects_names.txt 1 0.01'.split()) == -1
+    assert app_instance.do_train('train tests/file_with_incorrects_names.txt 1 0.01'.split()) == -1
 
 def test_correct_train(app_instance):
-    assert app_instance.do_train('train file_with_names.txt 1 0.01'.split()) == 0
+    assert app_instance.do_train('train tests/file_with_names.txt 1 0.01'.split()) == 0
 
 def test_train_on_random_images(app_instance):
     assert app_instance.do_train_on_random_images('train_on_random_images 100'.split()) == -1
