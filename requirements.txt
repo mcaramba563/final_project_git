@@ -2,4 +2,3 @@ numpy==2.1.1
 pytest==8.3.3
 imageio[ffmpeg]==2.36.0
 matplotlib==3.9.2
-glob

@@ -2,7 +2,7 @@ import numpy as np
 import imageio.v3 as iio
 import matplotlib.pyplot as plt
 import os
-from utils import file_exists
+from bin.utils import file_exists
 
 class Perceptron:    
 
@@ -60,7 +60,7 @@ class Perceptron:
         self.bias_gen()
 
         if (path_to_load is not None):
-                self.load_model(path_to_load)
+            self.load_model(path_to_load)
     
     def tanh(self, x):
         """
@@ -177,14 +177,11 @@ class Perceptron:
         self.epochs = epochs
         self.learning_rate = learning_rate
         y_train_one_hot = np.zeros((len(y_train), self.output_size))
-        #print(X_train, y_train)
+        
         for i in range(len(y_train)):
             y_train_one_hot[i][int(y_train[i])] = 1
         for epoch in range(self.epochs):
             for ind in range(len(X_train)):
-                if (ind % 10000 == 0 and ind > 0):
-                    print(ind)
-                
                 self.forward(X_train[ind].reshape(-1))
                 self.backprop(y_train_one_hot[ind])
             print(f'Epoch {epoch + 1}/{self.epochs} completed')

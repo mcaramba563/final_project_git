@@ -1,6 +1,6 @@
 import numpy as np
-from model import Perceptron
-from app import *
+from bin.model import Perceptron
+from bin.app import *
 import copy
 
 #predict images/mnist_png/test/0/10.png

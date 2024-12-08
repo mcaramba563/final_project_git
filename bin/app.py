@@ -1,9 +1,9 @@
 import numpy as np
-from model import Perceptron
-from utils import get_random_pathes
-from utils import file_exists
+from bin.model import Perceptron
+from bin.utils import get_random_pathes
+from bin.utils import file_exists
 import copy
-from app import *
+from bin.app import *
 
 class App:
     def __init__(self):
