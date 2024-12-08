@@ -134,11 +134,12 @@ class Perceptron:
         :type y_train_one_hot: numpy.ndarray
         """
         X = self.X
+        
         hidden_layer_output = self.hidden_layer_output
         final_output = self.final_hidden_layer_output
         error_final = y_train_one_hot - final_output
         
-        d_final_input = error_final * self.tanh_derivative(final_output) # before tanh
+        d_final_input = error_final * self.tanh_derivative(final_output)
         d_hidden_layers = [None for _ in range(len(self.weights_input_hidden))]
     
         for j in reversed(range(len(self.weights_input_hidden))):

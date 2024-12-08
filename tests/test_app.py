@@ -83,8 +83,6 @@ def load_custom_model(app_instance):
 def test_error_save_model(app_instance):
     assert app_instance.do_save_model('save_model Z:|ASDPL'.split()) == -1
 
-
-
 def test_make_custom_model_invalid_inputs(app_instance):
     assert app_instance.do_make_custom_model('make_custom_model'.split()) == -1
     assert app_instance.do_make_custom_model('make_custom_model -100 256 128'.split()) == -1
