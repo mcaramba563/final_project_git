@@ -2,7 +2,6 @@ import numpy as np
 from bin.model import Perceptron
 from bin.app import *
 
-#predict images/mnist_png/test/0/10.png
 opt = {'predict': 'predict', 'train': 'train', 'train_on_random_images': 'train_on_random_images', \
     'exit' : 'exit', 'load_default_model' : 'load_default_model', 'make_custom_model': 'make_custom_model', \
     'reset_training': 'reset_training', 'load_custom_model': 'load_custom_model', 'save_model': 'save_model'}
