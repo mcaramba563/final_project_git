@@ -39,7 +39,7 @@ Run the app in interactive mode:
 ## 1. Create a Custom Model
 Create a model with specific hidden layer sizes:
 
-    make_custom_model layer1_size layer_size ...
+    make_custom_model layer1_size layer2_size ...
 
 Example:
 
