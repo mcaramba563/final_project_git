@@ -4,6 +4,7 @@ import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from bin.utils import file_exists
 from bin.model import Perceptron
 
 @pytest.fixture
@@ -64,10 +65,11 @@ def test_predict(perceptron_instance):
     prediction = perceptron_instance.predict(X)
     assert 0 <= prediction < perceptron_instance.output_size
 
-def test_save_and_load_model(tmp_path, perceptron_instance):
-    model_path = tmp_path / "model.npy"
+def test_save_and_load_model(perceptron_instance):
+    tmp_path = 'models/'
+    model_path = tmp_path + "test_model_2.npy"
     perceptron_instance.save_model(str(model_path))
-    assert model_path.exists()
+    assert file_exists(model_path)
 
     new_perceptron = Perceptron()
     new_perceptron.load_model(str(model_path))

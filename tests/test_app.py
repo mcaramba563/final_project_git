@@ -20,7 +20,6 @@ def count_of_right(test_cases, app_instance):
     for command, expected in test_cases:
         app_instance.do_predict(command)
         actual = int(mock_print.call_args[0][0])
-        print(actual)
         if actual == expected:
             cnt_right += 1
 
@@ -78,7 +77,7 @@ def test_make_custom_model(app_instance):
 
 
 def load_custom_model(app_instance):
-    assert app_instance.do_load_custom_model('load_custom_model models/folder2/asd.npy'.split()) == 0
+    assert app_instance.do_load_custom_model('load_custom_model models/folder2/model2.npy'.split()) == 0
 
 def test_error_save_model(app_instance):
     assert app_instance.do_save_model('save_model Z:|ASDPL'.split()) == -1

@@ -7,9 +7,9 @@ from bin.app import *
 
 class App:
     def __init__(self):
-        self.default_model = Perceptron(path_to_load='models/folder2/asd.npy')
+        self.default_model = Perceptron(path_to_load='models/folder2/model2.npy')
         """A default perceptron model loaded from a predefined file."""
-        self.nn = Perceptron(path_to_load='models/folder2/asd.npy')
+        self.nn = Perceptron(path_to_load='models/folder2/model2.npy')
         """The current perceptron model in use."""
 
     def do_predict(self, str):
@@ -189,7 +189,7 @@ class App:
             Loads the default perceptron model from a predefined file.
         """
         
-        self.nn = Perceptron(path_to_load='models/folder2/asd.npy')
+        self.nn = Perceptron(path_to_load='models/folder2/model2.npy')
         self.default_model = copy.copy(self.nn)
 
     def reset_training(self):
