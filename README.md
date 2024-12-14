@@ -73,7 +73,7 @@ Predict the class of a given image:
 
 Example:
 
-predict images/mnist_png/test/0/10.png
+    predict images/mnist_png/test/0/10.png
 
 ## 5. Save the Model
 Save the current model to a file:
