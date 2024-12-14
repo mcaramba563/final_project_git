@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>app.App</title>
+    <meta name="generator" content="pydoctor 24.11.0"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          utils/app/model <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="app.App.html" class="internal-link" title="This class"><wbr></wbr>App</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="app.App.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#do_load_custom_model" class="internal-link" title="app.App.do_load_custom_model">do<wbr></wbr>_load<wbr></wbr>_custom<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#do_load_default_model" class="internal-link" title="app.App.do_load_default_model">do<wbr></wbr>_load<wbr></wbr>_default<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#do_make_custom_model" class="internal-link" title="app.App.do_make_custom_model">do<wbr></wbr>_make<wbr></wbr>_custom<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#do_predict" class="internal-link" title="app.App.do_predict">do<wbr></wbr>_predict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#do_save_model" class="internal-link" title="app.App.do_save_model">do<wbr></wbr>_save<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#do_train" class="internal-link" title="app.App.do_train">do<wbr></wbr>_train</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#do_train_on_random_images" class="internal-link" title="app.App.do_train_on_random_images">do<wbr></wbr>_train<wbr></wbr>_on<wbr></wbr>_random<wbr></wbr>_images</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reset_training" class="internal-link" title="app.App.reset_training">reset<wbr></wbr>_training</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_model" class="internal-link" title="app.App.default_model">default<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#nn" class="internal-link" title="app.App.nn">nn</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="app.html" class="internal-link" title="The parent of this class">app</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="app.App.html" class="internal-link" title="app.App"><wbr></wbr>App</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="app.html" class="internal-link">app</a></code><wbr></wbr>.<code><a href="app.App.html" class="internal-link" title="app.App">App</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">App</span>:</code></p>
+          <p><a href="classIndex.html#app.App">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id2">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="app.App.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#do_load_custom_model" class="internal-link" title="app.App.do_load_custom_model">do<wbr></wbr>_load<wbr></wbr>_custom<wbr></wbr>_model</a></code></td>
+    <td>Loads a custom perceptron model from a specified file path.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#do_load_default_model" class="internal-link" title="app.App.do_load_default_model">do<wbr></wbr>_load<wbr></wbr>_default<wbr></wbr>_model</a></code></td>
+    <td>Loads the default perceptron model from a predefined file.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#do_make_custom_model" class="internal-link" title="app.App.do_make_custom_model">do<wbr></wbr>_make<wbr></wbr>_custom<wbr></wbr>_model</a></code></td>
+    <td>Creates a custom perceptron model with specified hidden layer sizes.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#do_predict" class="internal-link" title="app.App.do_predict">do<wbr></wbr>_predict</a></code></td>
+    <td>Predicts the class of an image given its file path.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#do_save_model" class="internal-link" title="app.App.do_save_model">do<wbr></wbr>_save<wbr></wbr>_model</a></code></td>
+    <td>Saves the current model to a specified file path.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#do_train" class="internal-link" title="app.App.do_train">do<wbr></wbr>_train</a></code></td>
+    <td>Trains the model on labeled image data from a file.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#do_train_on_random_images" class="internal-link" title="app.App.do_train_on_random_images">do<wbr></wbr>_train<wbr></wbr>_on<wbr></wbr>_random<wbr></wbr>_images</a></code></td>
+    <td>Trains the model on a random selection of labeled images.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#reset_training" class="internal-link" title="app.App.reset_training">reset<wbr></wbr>_training</a></code></td>
+    <td>Reset training</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#default_model" class="internal-link" title="app.App.default_model">default<wbr></wbr>_model</a></code></td>
+    <td>A default perceptron model loaded from a predefined file.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#nn" class="internal-link" title="app.App.nn">nn</a></code></td>
+    <td>The current perceptron model in use.</td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="app.App.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__init__" title="app.App.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.do_load_custom_model">
+    
+  </a>
+  <a name="do_load_custom_model">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">do_load_custom_model</span><span class="function-signature">(self, str)</span>:
+    
+    <a class="headerLink" href="#do_load_custom_model" title="app.App.do_load_custom_model">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Loads a custom perceptron model from a specified file path.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">str:</span>list of str</td><td class="fieldArgDesc">List of strings where the second element is the model file path</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">int</td><td class="fieldArgDesc">0 on success, -1 on failure</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.do_load_default_model">
+    
+  </a>
+  <a name="do_load_default_model">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">do_load_default_model</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#do_load_default_model" title="app.App.do_load_default_model">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Loads the default perceptron model from a predefined file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.do_make_custom_model">
+    
+  </a>
+  <a name="do_make_custom_model">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">do_make_custom_model</span><span class="function-signature">(self, str)</span>:
+    
+    <a class="headerLink" href="#do_make_custom_model" title="app.App.do_make_custom_model">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Creates a custom perceptron model with specified hidden layer sizes.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">str:</span>list of str</td><td class="fieldArgDesc">List of strings where each element represents the number of neurons in a hidden layer</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">int</td><td class="fieldArgDesc">0 on success, -1 on failure</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.do_predict">
+    
+  </a>
+  <a name="do_predict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">do_predict</span><span class="function-signature">(self, str)</span>:
+    
+    <a class="headerLink" href="#do_predict" title="app.App.do_predict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Predicts the class of an image given its file path.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">str:</span>list of str</td><td class="fieldArgDesc">List of strings where the second element is the image file path</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">int</td><td class="fieldArgDesc">0 on success, -1 on failure</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.do_save_model">
+    
+  </a>
+  <a name="do_save_model">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">do_save_model</span><span class="function-signature">(self, str)</span>:
+    
+    <a class="headerLink" href="#do_save_model" title="app.App.do_save_model">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Saves the current model to a specified file path.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">str:</span>list of str</td><td class="fieldArgDesc">List of strings where the second element is the save file path</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">int</td><td class="fieldArgDesc">0 on success, -1 on failure</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.do_train">
+    
+  </a>
+  <a name="do_train">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">do_train</span><span class="function-signature">(self, str)</span>:
+    
+    <a class="headerLink" href="#do_train" title="app.App.do_train">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Trains the model on labeled image data from a file.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">str:</span>list of str</td><td class="fieldArgDesc">List of strings containing the file path, epochs, and learning rate</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">int</td><td class="fieldArgDesc">0 on success, -1 on failure</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.do_train_on_random_images">
+    
+  </a>
+  <a name="do_train_on_random_images">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">do_train_on_random_images</span><span class="function-signature">(self, str)</span>:
+    
+    <a class="headerLink" href="#do_train_on_random_images" title="app.App.do_train_on_random_images">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Trains the model on a random selection of labeled images.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">str:</span>list of str</td><td class="fieldArgDesc">List of strings containing the number of images, epochs, and learning rate</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">int</td><td class="fieldArgDesc">0 on success, -1 on failure</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="app.App.reset_training">
+    
+  </a>
+  <a name="reset_training">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">reset_training</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#reset_training" title="app.App.reset_training">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Reset training</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="app.App.default_model">
+    
+  </a>
+  <a name="default_model">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">default_model</span> =
+    
+    <a class="headerLink" href="#default_model" title="app.App.default_model">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>A default perceptron model loaded from a predefined file.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="app.App.nn">
+    
+  </a>
+  <a name="nn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">nn</span> =
+    
+    <a class="headerLink" href="#nn" title="app.App.nn">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The current perceptron model in use.</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for utils/app/model,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.0 at 2024-12-14 12:46:19.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

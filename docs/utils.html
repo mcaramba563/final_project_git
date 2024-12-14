@@ -6,7 +6,7 @@
 
   <head>
     
-    <title>app</title>
+    <title>utils</title>
     <meta name="generator" content="pydoctor 24.11.0"> 
         
     </meta>
@@ -110,7 +110,7 @@
 
       <div class="thingTitle">
         <span>Module</span>
-        <code class="thisobject"><a href="app.html" class="internal-link" title="This module">app</a></code> 
+        <code class="thisobject"><a href="utils.html" class="internal-link" title="This module">utils</a></code> 
       </div>
       
       <div>
@@ -119,7 +119,10 @@
         
          
 
-        <div class="childrenKindTitle">Classes</div>
+        
+        
+
+        <div class="childrenKindTitle">Functions</div>
         <ul>
     
     <li class="">
@@ -128,15 +131,22 @@
         
 
         
-            <div class="itemName"><code><a href="app.App.html" class="internal-link" title="app.App"><wbr></wbr>App</a></code>
+            <div class="itemName"><code><a href="#file_exists" class="internal-link" title="utils.file_exists">file<wbr></wbr>_exists</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_random_pathes" class="internal-link" title="utils.get_random_pathes">get<wbr></wbr>_random<wbr></wbr>_pathes</a></code>
             </div>
         
 
     </li>
-</ul>
-
-        
-         
+</ul> 
 
         
          
@@ -166,7 +176,7 @@
         
 
         <div class="page-header">
-          <h1 class="module"><code><code><a href="app.html" class="internal-link">app</a></code></code></h1>
+          <h1 class="module"><code><code><a href="utils.html" class="internal-link">utils</a></code></code></h1>
           <div id="showPrivate">
             <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
           </div>
@@ -186,14 +196,19 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id1">
+          <table class="children sortable" id="id5">
   
   
-  <tr class="class">
+  <tr class="function">
     
-    <td>Class</td>
-    <td><code><a href="app.App.html" class="internal-link" title="app.App"><wbr></wbr>App</a></code></td>
-    <td><span class="undocumented">No class docstring; 2/2 instance variables, 8/9 methods documented</span></td>
+    <td>Function</td>
+    <td><code><a href="#file_exists" class="internal-link" title="utils.file_exists">file<wbr></wbr>_exists</a></code></td>
+    <td>Checks whether a file exists at the given path</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_random_pathes" class="internal-link" title="utils.get_random_pathes">get<wbr></wbr>_random<wbr></wbr>_pathes</a></code></td>
+    <td>Retrieves random image paths and their corresponding labels from the MNIST dataset</td>
   </tr>
 </table>
           
@@ -202,7 +217,55 @@
         </div>
 
         <div id="childList">
-          
+          <div class="basefunction">
+  
+  
+  <a name="utils.file_exists">
+    
+  </a>
+  <a name="file_exists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">file_exists</span><span class="function-signature">(file_path)</span>:
+    
+    <a class="headerLink" href="#file_exists" title="utils.file_exists">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Checks whether a file exists at the given path</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">file<wbr></wbr>_path:</span>str</td><td class="fieldArgDesc">The file path to check.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">bool</td><td class="fieldArgDesc">True if the file exists, False otherwise.</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="utils.get_random_pathes">
+    
+  </a>
+  <a name="get_random_pathes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_random_pathes</span><span class="function-signature">(n)</span>:
+    
+    <a class="headerLink" href="#get_random_pathes" title="utils.get_random_pathes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves random image paths and their corresponding labels from the MNIST dataset</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">n:</span>int</td><td class="fieldArgDesc">Number of random image paths and labels to return.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">tuple(list[str], list[int])</td><td class="fieldArgDesc">A tuple containing a list of n shuffled image paths (list of str), a list of n corresponding labels (list of int).</td></tr></table></div>
+  </div>
+</div>
         </div>
       
       </div>

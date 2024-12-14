@@ -193,4 +193,7 @@ class App:
         self.default_model = copy.copy(self.nn)
 
     def reset_training(self):
+        """
+            Reset training
+        """
         self.nn = copy.copy(self.default_model)
